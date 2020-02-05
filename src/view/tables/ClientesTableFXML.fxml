@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="403.0" prefWidth="594.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.tables.ClientesTableFXMLController">
+   <children>
+      <AnchorPane layoutX="-40.0" layoutY="-24.0" prefHeight="512.0" prefWidth="639.0" style="-fx-background-color: #00ffbf;">
+         <children>
+            <TableView fx:id="tbCliente" onMouseClicked="#pegarClienteTabela" layoutX="55.0" layoutY="82.0" prefHeight="409.0" prefWidth="570.0">
+              <columns>
+                <TableColumn fx:id="idCol" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="nomeCol" prefWidth="75.0" text="Nome" />
+                <TableColumn fx:id="enderecoCol" prefWidth="75.0" text="Endereco" />
+              </columns>
+            </TableView>
+            <TextField fx:id="txtBuscarCliente" layoutX="55.0" layoutY="42.0" onKeyReleased="#consultarNomeClienteKey" prefHeight="25.0" prefWidth="570.0" promptText="Digite o nome do cliente">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
